@@ -73,16 +73,7 @@ if selection=='Failure Modes':
 elif selection=='Clustering':
     st.title('3D Plotting and Clustering Analysis')
     height_figs=500
+    st.write("aaaa")
 
     #importing data
-    data_g = pd.read_csv('gradebook.csv')
-    # scaling data, this part will only work if the columns listed exist
-    data_gb["homework"] = data_gb["homework"]*100/200;
-    data_gb["teamwork"] = data_gb["teamwork"]*100/400
-    data_gb["exams"] = data_gb["exams"]*100/400
-
-    cols=list(data_gb.columns)
-    #st.write('Shown below is your gradebook')
-    #st.write(gb_all)
-    #st.markdown('### trial')
     
