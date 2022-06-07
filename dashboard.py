@@ -73,15 +73,15 @@ if selection=='Failure Modes':
 elif selection=='Clustering':
     st.title('3D Plotting and Clustering Analysis')
     height_figs=500
-    data_gb = pd.read_csv('gradebook.csv')
+    df_gb = pd.read_csv('gradebook2.csv')
     #
-    data_gb["homework"] = data_gb["homework"]*100/200;
-    data_gb["teamwork"] = data_gb["teamwork"]*100/400
-    data_gb["exams"] = data_gb["exams"]*100/400
-    st.write(data_gb.columns)
+    #df_gb["homework"] = df_gb["homework"]*100/200;
+    #df_gb["teamwork"] = df_gb["teamwork"]*100/400
+    #df_gb["exams"] = df_gb["exams"]*100/400
+    #st.write(data_gb.columns)
 
     #importing data
-    fig_gb = px.scatter_3d(data_gb, x='homework', y='teamwork', z='exams', 
+    fig_gb = px.scatter_3d(df_gb, x='homework', y='teamwork', z='exams', 
                     color='letter grade') #letter grade
     fig_gb.update_layout(scene = dict(
                         xaxis = dict(nticks=4, range=[0,110],),
@@ -92,7 +92,7 @@ elif selection=='Clustering':
     st.plotly_chart(fig_gb,use_container_width=True)
     
     pca = sklearnPCA(n_components=2) #2-dimensional PCA
-    pca_scores = pca.fit_transform(data_gb.iloc[:,0:3])
+    pca_scores = pca.fit_transform(df_gb.iloc[:,0:3])
     #st.write(pca.explained_variance_ratio_)  
     transformed = pd.DataFrame(pca_scores)
 
