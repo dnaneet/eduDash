@@ -10,19 +10,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
-st.session_state['answer'] = ''
-st.write(st.session_state)
-realans = ['', 'abc', 'edf']
-
-if  st.session_state['answer'] in realans:
-    answerStat = "correct"
-elif st.session_state['answer'] not in realans:
-    answerStat = "incorrect"
-
-st.write(st.session_state)
-st.write(answerStat)
-
-
 # run from anywhere with: streamlit run "g:/My Drive/PythonSummerProject2022_DrN/Code/Dashboard.py"
 # create requirements file with: pipreqs "G:\My Drive\PythonSummerProject2022_DrN\Code" --force
 
