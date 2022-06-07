@@ -1,8 +1,6 @@
 name,attempt,"43429000: 
 
-I will not discuss this exam with peers, friends, family, neighbors until the week after the exam. Discussing any aspect of this exam with others until the week after the exam OR answering this question with ""false"" calls into question your academic integrity and will lead to a total invalidation of your exam score.
-
-",0,"43429009: Design Problem
+I will not discuss this exam",0,"43429009: Design Problem
 [Partial credit is available for this problem. Please show your calculations in organized fashion. You may use upto 2 lettersize pages for your work for this problem.]
 The beam shown in the figure is made from two boards. Evaluate the maximum shear stress in the glue necessary to hold the boards together along the seam where they are joined. Report the absolute value of your answer, in MPa.
 
@@ -12,19 +10,12 @@ The Centroidal location,  is 0.120 m from the bottom.
 The Moment of Inertia of the cross-section, about its neutral axis (""NA"") is .
 The Young's modulus of the material for the two boards is 13 GPa.
 The vertical reactions at the supports are 6.5 kN and 19.5 kN.
-",10,"43429010: For the design problem, submit your handwritten work for this problem to the testing center. Your work will be evaluated for accuracy and adherence to communication standard (proper use of the problem-solving template) that has been established for this course.",5,"44289614: For a cantilever with a counter-clockwise moment applied to its end, there exists no shear force along the length.",2,"44289572: For a simply supported beam with a centrally applied point load, the maximum bending moment is at...",2,"43429001: 
-In this image ""NA"" is the ""Neutral Axis"".
-For a beam with a rectangular cross section that is simply supported with a centrally located, downward acting point load, the minimum shear stress is",1.5,"43429004: 
-In this image ""NA"" is the ""Neutral Axis"".
-For a beam with a rectangular cross section that is simply supported with a centrally located, downward acting point load, the maximum normal stress is",1.5,"44313938: A cantilever beam is loaded as shown in the figure. What is the absolute value of the bending moment at location ""B?"" Report your answer in lb-ft.
+",10,"43429010: For the design problem, submit your handwritten work",5,"44289614: For a cantilever with a counter-clockwise moment applied to its end, there exists no shear force along the length.",2,44289572: For a simply supported beam ,2,"43429001: 
+For a beam with a rectangular cross section",1.5,"43429004: 
+For a beam with a rectangular cross section ",1.5,44313938: A cantilever beam is loaded as shown I,8,44289612: For a cantilever with a downward acting ,2,44289574: For a simply supported beam,2,"43429003: 
 
-",8,"44289612: For a cantilever with a downward acting point load applied to its end, the shear force is constant all along the length.",2,"44289574: For a simply supported beam with a centrally applied point load, the bending moment diagram is constructed of...
-
-(approach the SFD/BMD construction from the left support)",2,"43429003: 
-In this image ""NA"" is the ""Neutral Axis"".
-For a beam with a rectangular cross section that is simply supported with a centrally located, downward acting point load, the minimum normal stress is",1.5,"43429002: 
-In this image ""NA"" is the ""Neutral Axis"".
-For a beam with a rectangular cross section that is simply supported with a centrally located, downward acting point load, the maximum shear stress is",1.5,n correct,n incorrect,score
+For a beam with a rectangular cross section that is simply supported",1.5,"43429002: 
+For a beam with a rectangular cross section that is simply supported ",1.5,n correct,n incorrect,score
 a,1,True,0,0.975,0,,5,False,0,the midspan of the beam.,2,at the center.,0,At the top fiber.,1.5,1200,0,,,,,,,,,4,4,8.5
 b,1,True,0,,10,,4,,,the midspan of the beam.,2,at the center.,0,At the top fiber.,1.5,-5600,0,False,0,,,,,,,4,4,17.5
 c,1,True,0,4.875,10,,5,True,2,,,at the top fiber.,1.5,At the top fiber.,1.5,2000,8,,,"two linear line segments, one sloping upwards on the left half on the left and the other sloping downard on the right half.",2,,,,,8,0,30
