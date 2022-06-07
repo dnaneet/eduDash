@@ -95,7 +95,13 @@ elif selection=='Clustering':
     pca_scores = pca.fit_transform(data_gb.iloc[:,0:3])
     st.write(pca.explained_variance_ratio_)  
     transformed = pd.DataFrame(pca_scores)
-#print(transformed.head(5))
-pca12 = np.array(transformed)
-    #scores_scaled
+
+    pca12 = np.array(transformed)
+    
+    # Clustering    
+    kmeans = KMeans(n_clusters=5,random_state=0)
+    kmeans.fit(pca12)
+    labels_kmean = kmeans.predict(pca12)
+    st.write(labels_kmean)
+    
     
