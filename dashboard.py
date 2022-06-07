@@ -74,7 +74,7 @@ if selection=='Failure Modes in Student Quizzes (Canvas quiz data)':
 elif selection=='K-Means Clustering of gradebook':
     st.title('3D Plotting and Clustering Analysis')
     height_figs=500
-    df_gb = pd.read_csv('gradebook2.csv')
+    df_gb = pd.read_csv('gradebook.csv')
     #
     #df_gb["homework"] = df_gb["homework"]*100/200;
     #df_gb["teamwork"] = df_gb["teamwork"]*100/400
