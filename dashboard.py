@@ -5,8 +5,8 @@ import plotly.express as px
 
 # machine learning functions/packages
 from sklearn.decomposition import PCA as sklearnPCA
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
-from sklearn.preprocessing import StandardScaler
+#from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+#from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
