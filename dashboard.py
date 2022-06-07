@@ -93,7 +93,7 @@ elif selection=='Clustering':
     
     pca = sklearnPCA(n_components=2) #2-dimensional PCA
     pca_scores = pca.fit_transform(data_gb.iloc[:,0:3])
-    st.write(pca.explained_variance_ratio_)  
+    #st.write(pca.explained_variance_ratio_)  
     transformed = pd.DataFrame(pca_scores)
 
     pca12 = np.array(transformed)
@@ -102,6 +102,17 @@ elif selection=='Clustering':
     kmeans = KMeans(n_clusters=5,random_state=0)
     kmeans.fit(pca12)
     labels_kmean = kmeans.predict(pca12)
-    st.write(labels_kmean)
+    #st.write(labels_kmean)
     
+    df_gb["kmeans cluster"] = labels_kmean
+    df2 = df1.sort_values('kmeans cluster')
+    
+    fig_clusters = px.scatter_3d(df2.iloc[:,0:10], x='homework', y='teamwork', z='exams', 
+                    color='kmeans cluster')
+    fig_clusters.update_layout(scene = dict(
+        xaxis = dict(nticks=4, range=[0,110],),
+                     yaxis = dict(nticks=4, range=[0,110],),
+                     zaxis = dict(nticks=4, range=[0,110],),),
+                     margin=dict(r=20, l=10, b=10, t=10))
+    st.plotly_chart(fig_clusters,use_container_width=True)
     
