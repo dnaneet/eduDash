@@ -105,7 +105,7 @@ elif selection=='Clustering':
     #st.write(labels_kmean)
     
     df_gb["kmeans cluster"] = labels_kmean
-    df2 = df1.sort_values('kmeans cluster')
+    df2 = df_gb.sort_values('kmeans cluster')
     
     fig_clusters = px.scatter_3d(df2.iloc[:,0:10], x='homework', y='teamwork', z='exams', 
                     color='kmeans cluster')
