@@ -73,7 +73,8 @@ if selection=='Failure Modes':
 elif selection=='Clustering':
     st.title('3D Plotting and Clustering Analysis')
     height_figs=500
-    st.write("aaaa")
+    data_gb = pd.read_csv('gradebook.csv')
+    st.write(data_gb.columns)
 
     #importing data
     
