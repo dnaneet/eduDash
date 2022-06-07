@@ -81,6 +81,7 @@ elif selection=='Clustering':
     #st.write(data_gb.columns)
 
     #importing data
+    st.subheader("3D representation of three categories of grades")
     fig_gb = px.scatter_3d(df_gb, x='homework', y='teamwork', z='exams', 
                     color='letter grade') #letter grade
     fig_gb.update_layout(scene = dict(
