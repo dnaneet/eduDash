@@ -91,9 +91,11 @@ elif selection=='Clustering':
                         height=800, width=800, title_text="letter grades")
     st.plotly_chart(fig_gb,use_container_width=True)
     
-    scaler = StandardScaler()
-    scores_scaled = scaler.fit_transform(df1)
-    #print(scores)
-    type(scores_scaled)
+    pca = sklearnPCA(n_components=2) #2-dimensional PCA
+    pca_scores = pca.fit_transform(df1.iloc[:,0:3])
+    st.write(pca.explained_variance_ratio_)  
+    transformed = pd.DataFrame(pca_scores)
+#print(transformed.head(5))
+pca12 = np.array(transformed)
     #scores_scaled
     
