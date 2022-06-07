@@ -44,31 +44,32 @@ if selection=='Failure Modes in Student Quizzes (Canvas quiz data)':
 
     #importing data
     #data_csv = pd.read_csv(url="https://raw.githubusercontent.com/dnaneet/eduDash/main/dummy_quiz.csv")
-    data_csv=st.file_uploader(label='Please choose your assignemnt gradebook',type=['csv'])
-    if data_csv is not None:
-        data_assign=pd.read_csv(data_csv)
-
-    cols=list(data_assign.columns)
+    #data_csv=st.file_uploader(label='Please choose your assignemnt gradebook',type=['csv'])
+    #if data_csv is not None:
+    #    data_assign=pd.read_csv(data_csv)
+    
+    df_quiz = pd.read_csv("https://raw.githubusercontent.com/dnaneet/eduDash/main/quiz-data.csv")
+    cols=list(df_quiz.columns)
 
     #user inputs
-    data_x=st.selectbox(label='Please select the column that has student names',options=cols)
-    data_y=st.selectbox(label='Please select the question you with to view',options=cols)
+    xdata=st.selectbox(label='Please select the column that has student names',options=cols)
+    ydata=st.selectbox(label='Please select the question you with to view',options=cols)
     coloring=st.selectbox(label='Choose assignment coloring scheme',options=cols)
     
     # plotting
-    fig_scatter=px.scatter(data_frame=data_assign,x=data_assign[data_x],y=data_assign[data_y],
+    fig_errormode=px.scatter(df_quiz,x = xdata, y = ydata,
         color=coloring,
         title='<b>Student scores',
         height=700)
     
     # figure formating
-    fig_scatter.update_layout(title_font_size=20,title_x=0.5)
-    fig_scatter.update_xaxes(title_font_size=15,tickfont=dict(size=15),title='X Axis')
-    fig_scatter.update_yaxes(title_font_size=15,tickfont=dict(size=15),title='Y Axis')
-    fig_scatter.update_traces(marker_size=20)
+    fig_errormode.update_layout(title_font_size=20,title_x=0.5)
+    fig_errormode.update_xaxes(title_font_size=15,tickfont=dict(size=15),title='X Axis')
+    fig_errormode.update_yaxes(title_font_size=15,tickfont=dict(size=15),title='Y Axis')
+    fig_errormode.update_traces(marker_size=20)
 
     # showing plot in streamlit
-    st.plotly_chart(fig_scatter,use_container_width=True)
+    st.plotly_chart(fig_errormode,use_container_width=True)
 
 # second tab code
 elif selection=='K-Means Clustering of gradebook':
