@@ -26,9 +26,10 @@ st.sidebar.markdown("# Use the radio buttons to choose your app")
 selection=st.sidebar.radio(label='Tool Choice',options=['Failure Modes','Clustering'])
 
 st.sidebar.markdown("---")
-st.sidebar.write("This web-app provides professors a deepened level of data discovery.")
+st.sidebar.write("This web-app allows multi-dimensional visualization and analysis of student work-products and gradebook .")
 st.sidebar.markdown("###### Created in Python with Streamlit.")
-st.sidebar.markdown("###### Created by Ry Swaty in 2022.")
+st.sidebar.markdown("###### GUI development and Code adaptation by Ry Swaty.")
+st.sidebar.markdown("###### GUI and Code administration by Aneet Narendanath, PhD (C) 2022")
 st.sidebar.markdown("---")
 
 # defining universally used values
@@ -125,5 +126,5 @@ elif selection=='Clustering':
     st.plotly_chart(fig_clusters,use_container_width=True)
     
     df2.to_csv('cluster-data.csv', index=False)
-    st.markdown("The clustered gradebook data is available via [this link](cluster-data.csv).")
+    #st.markdown("The clustered gradebook data is available via [this link](cluster-data.csv).")
     
