@@ -82,6 +82,9 @@ elif selection=='Clustering':
 
     #importing data
     st.subheader("3D representation of three categories of grades")
+    xdata = st.selectbox(
+     'What would you like on the X axis',
+     np.array(df.columns))
     fig_gb = px.scatter_3d(df_gb, x='homework', y='teamwork', z='exams', 
                     color='letter grade') #letter grade
     fig_gb.update_layout(scene = dict(
@@ -101,6 +104,7 @@ elif selection=='Clustering':
     
     # Clustering    
     nc = st.slider('Select number of clusters desired',0,10,1)
+    st.write("It is suggested that you pick the same number of clusters as you have traditional letter grades.  This will allow you to compare and contrast letter grades with clusters.")
     kmeans = KMeans(n_clusters=nc,random_state=0)
     kmeans.fit(pca12)
     labels_kmean = kmeans.predict(pca12)
