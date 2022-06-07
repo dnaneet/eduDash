@@ -39,7 +39,7 @@ st.sidebar.markdown("---")
 
 #data_csv = pd.read_csv(url="https://raw.githubusercontent.com/dnaneet/eduDash/main/dummy_quiz.csv")
 # first tab code
-if selection=='Failure Modes':
+if selection=='Failure Modes in Student Quizzes (Canvas quiz data)':
     st.title('Failure Mode Exploration')
 
     #importing data
@@ -71,7 +71,7 @@ if selection=='Failure Modes':
     st.plotly_chart(fig_scatter,use_container_width=True)
 
 # second tab code
-elif selection=='Clustering':
+elif selection=='K-Means Clustering of gradebook':
     st.title('3D Plotting and Clustering Analysis')
     height_figs=500
     df_gb = pd.read_csv('gradebook2.csv')
