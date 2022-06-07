@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
-st.session_state['answer'] = ''!
+st.session_state['answer'] = ''
 st.write(st.session_state)
 realans = ['', 'abc', 'edf']
 
