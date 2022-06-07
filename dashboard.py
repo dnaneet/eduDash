@@ -23,7 +23,7 @@ st.set_page_config(page_title='Learning Analytics Dashboard',layout='wide')
 
 st.sidebar.markdown("# Choose your analysis tool")
 
-selection=st.sidebar.radio(label='Tool Choice',options=['Failure Modes','Clustering'])
+selection=st.sidebar.radio(label=' ',options=['Failure Modes in Student Quizzes (Canvas quiz data)','K-Means Clustering of gradebook'])
 
 st.sidebar.markdown("---")
 st.sidebar.write("This web-app allows multi-dimensional visualization and analysis of student work-products and gradebook .")
