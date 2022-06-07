@@ -75,10 +75,7 @@ elif selection=='Clustering':
     height_figs=500
 
     #importing data
-    data_csv=st.file_uploader(label='Please choose your gradebook',type=['csv'])
-    if data_csv is not None:
-        data_gb=pd.read_csv(data_csv)
-
+    data_g = pd.read_csv('gradebook.csv')
     # scaling data, this part will only work if the columns listed exist
     data_gb["homework"] = data_gb["homework"]*100/200;
     data_gb["teamwork"] = data_gb["teamwork"]*100/400
