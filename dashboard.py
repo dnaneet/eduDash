@@ -56,9 +56,9 @@ if selection=='Failure Modes':
     
     # plotting
     fig_scatter=px.scatter(data_frame=data_assign,x=data_assign[data_x],y=data_assign[data_y],
-    color=coloring,
-    title='<b>Student scores',
-    height=700)
+        color=coloring,
+        title='<b>Student scores',
+        height=700)
     
     # figure formating
     fig_scatter.update_layout(title_font_size=20,title_x=0.5)
@@ -81,4 +81,13 @@ elif selection=='Clustering':
     st.write(data_gb.columns)
 
     #importing data
+    fig_gb = px.scatter_3d(df1.iloc[:,0:9], x='homework', y='teamwork', z='exams', 
+                    color='letter grade') #letter grade
+    fig_gb.update_layout(scene = dict(
+                        xaxis = dict(nticks=4, range=[0,110],),
+                        yaxis = dict(nticks=4, range=[0,110],),
+                        zaxis = dict(nticks=4, range=[0,110],),),
+                        margin=dict(r=20, l=10, b=10, t=10),
+                        height=800, width=800, title_text="letter grades")
+    st.plotly_chart(fig_gb,use_container_width=True)
     
