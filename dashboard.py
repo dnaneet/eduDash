@@ -100,7 +100,8 @@ elif selection=='Clustering':
     pca12 = np.array(transformed)
     
     # Clustering    
-    kmeans = KMeans(n_clusters=5,random_state=0)
+    nc = st.slider('Select number of clusters desired',0,10,1)
+    kmeans = KMeans(n_clusters=nc,random_state=0)
     kmeans.fit(pca12)
     labels_kmean = kmeans.predict(pca12)
     #st.write(labels_kmean)
