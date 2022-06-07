@@ -124,3 +124,6 @@ elif selection=='Clustering':
                      margin=dict(r=20, l=10, b=10, t=10))
     st.plotly_chart(fig_clusters,use_container_width=True)
     
+    df2.to_csv('cluster-data.csv', index=False)
+    st.markdown("The clustered gradebook data is available via [this link](cluster-data.csv).")
+    
