@@ -74,6 +74,10 @@ elif selection=='Clustering':
     st.title('3D Plotting and Clustering Analysis')
     height_figs=500
     data_gb = pd.read_csv('gradebook.csv')
+    #
+    data_gb["homework"] = data_gb["homework"]*100/200;
+    data_gb["teamwork"] = data_gb["teamwork"]*100/400
+    data_gb["exams"] = data_gb["exams"]*100/400
     st.write(data_gb.columns)
 
     #importing data
