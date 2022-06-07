@@ -92,7 +92,7 @@ elif selection=='Clustering':
     st.plotly_chart(fig_gb,use_container_width=True)
     
     pca = sklearnPCA(n_components=2) #2-dimensional PCA
-    pca_scores = pca.fit_transform(df1.iloc[:,0:3])
+    pca_scores = pca.fit_transform(data_gb.iloc[:,0:3])
     st.write(pca.explained_variance_ratio_)  
     transformed = pd.DataFrame(pca_scores)
 #print(transformed.head(5))
