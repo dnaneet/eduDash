@@ -91,3 +91,9 @@ elif selection=='Clustering':
                         height=800, width=800, title_text="letter grades")
     st.plotly_chart(fig_gb,use_container_width=True)
     
+    scaler = StandardScaler()
+    scores_scaled = scaler.fit_transform(df1)
+    #print(scores)
+    type(scores_scaled)
+    #scores_scaled
+    
