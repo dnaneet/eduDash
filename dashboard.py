@@ -14,14 +14,14 @@ from sklearn.cluster import KMeans
 # create requirements file with: pipreqs "G:\My Drive\PythonSummerProject2022_DrN\Code" --force
 
 # tab title and page config
-st.set_page_config(page_title='Gradebook Explorer',layout='wide')
+st.set_page_config(page_title='Learning Analytics Dashboard',layout='wide')
 
 # gradebook import + sidebar text + tool selection
 # gradebook=st.sidebar.file_uploader(label='Please choose your gradebook CSV file',type=['csv'])
 # if gradebook is not None:
 #         gb_all=pd.read_csv(gradebook)
 
-st.sidebar.markdown("# Use the radio buttons to choose your app")
+st.sidebar.markdown("# Choose your analysis tool")
 
 selection=st.sidebar.radio(label='Tool Choice',options=['Failure Modes','Clustering'])
 
