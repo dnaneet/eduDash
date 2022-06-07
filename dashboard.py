@@ -82,10 +82,13 @@ elif selection=='Clustering':
 
     #importing data
     st.subheader("3D representation of three categories of grades")
-    xdata = st.selectbox('What would you like on the X axis', np.array(df_gb.columns))
+    xdata = st.selectbox('Select your X axis [numeric only]', np.array(df_gb.columns))
+    ydata = st.selectbox('Select your Y axis [numeric only]', np.array(df_gb.columns))
+    zdata = st.selectbox('Select your Z axis [numeric only]', np.array(df_gb.columns))
+    colordata = st.selectbox('Select what you would like to color your data by [numeric only]', np.array(df_gb.columns))
                          
-    fig_gb = px.scatter_3d(df_gb, x='homework', y='teamwork', z='exams', 
-                    color='letter grade') #letter grade
+    fig_gb = px.scatter_3d(df_gb, x=xdata, y=ydata, z=zdata, 
+                    color=colordata) #letter grade
     fig_gb.update_layout(scene = dict(
                         xaxis = dict(nticks=4, range=[0,110],),
                         yaxis = dict(nticks=4, range=[0,110],),
