@@ -84,7 +84,7 @@ elif selection=='Clustering':
     st.subheader("3D representation of three categories of grades")
     xdata = st.selectbox(
      'What would you like on the X axis',
-     np.array(df.columns))
+     np.array(df.columns)
     fig_gb = px.scatter_3d(df_gb, x='homework', y='teamwork', z='exams', 
                     color='letter grade') #letter grade
     fig_gb.update_layout(scene = dict(
