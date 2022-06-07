@@ -75,13 +75,13 @@ elif selection=='Clustering':
     height_figs=500
     data_gb = pd.read_csv('gradebook.csv')
     #
-    data_gb["homework"] = data_gb["homework"]*100/200;
-    data_gb["teamwork"] = data_gb["teamwork"]*100/400
-    data_gb["exams"] = data_gb["exams"]*100/400
+    df["homework"] = data_gb["homework"]*100/200;
+    df["teamwork"] = data_gb["teamwork"]*100/400
+    df["exams"] = data_gb["exams"]*100/400
     st.write(data_gb.columns)
 
     #importing data
-    fig_gb = px.scatter_3d(df1.iloc[:,0:9], x='homework', y='teamwork', z='exams', 
+    fig_gb = px.scatter_3d(df, x='homework', y='teamwork', z='exams', 
                     color='letter grade') #letter grade
     fig_gb.update_layout(scene = dict(
                         xaxis = dict(nticks=4, range=[0,110],),
