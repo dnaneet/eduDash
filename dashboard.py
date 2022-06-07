@@ -42,7 +42,7 @@ if selection=='Failure Modes':
     st.title('Failure Mode Exploration')
 
     #importing data
-    data_csv = pd.read_csv(url="https://raw.githubusercontent.com/dnaneet/eduDash/main/dummy_quiz.csv")
+    #data_csv = pd.read_csv(url="https://raw.githubusercontent.com/dnaneet/eduDash/main/dummy_quiz.csv")
     data_csv=st.file_uploader(label='Please choose your assignemnt gradebook',type=['csv'])
     if data_csv is not None:
         data_assign=pd.read_csv(data_csv)
