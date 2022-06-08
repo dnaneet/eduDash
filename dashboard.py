@@ -26,7 +26,7 @@ st.sidebar.markdown("# Choose your analysis tool")
 selection=st.sidebar.radio(label=' ',options=['Failure Modes in Student Quizzes (Canvas quiz data)','K-Means Clustering of gradebook'])
 
 st.sidebar.markdown("---")
-st.sidebar.write("This web-app allows multi-dimensional visualization and analysis of student work-products and gradebook .")
+st.sidebar.write("Perform exploratory data vis and analysis of student work-products and gradebooks .")
 st.sidebar.markdown("###### Created in Python with Streamlit.")
 st.sidebar.markdown("###### GUI development and Code adaptation by Ry Swaty.")
 st.sidebar.markdown("###### GUI and Code administration by Aneet Narendanath, PhD (C) 2022")
