@@ -83,7 +83,7 @@ elif selection=='K-Means Clustering of gradebook':
     #st.write(data_gb.columns)
 
     #importing data
-    st.subheader("3D representation of three categories of grades")
+    #st.subheader("3D representation of three categories of grades")
     xdata = st.selectbox('Select your X axis [numeric only]', np.array(df_gb.columns))
     ydata = st.selectbox('Select your Y axis [numeric only]', np.array(df_gb.columns))
     zdata = st.selectbox('Select your Z axis [numeric only]', np.array(df_gb.columns))
