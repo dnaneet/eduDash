@@ -57,8 +57,7 @@ if selection=='Failure Modes in Student Quizzes (Canvas quiz data)':
     coloring=st.selectbox(label='Choose assignment coloring scheme',options=cols)
     
     # plotting
-    fig_errormode=px.scatter(df_quiz,x = xdata, y = ydata,
-        color=coloring,
+    fig_errormode=px.scatter(df_quiz,x = xdata, y = ydata,        
         title='<b>Student scores',
         height=700)
     
