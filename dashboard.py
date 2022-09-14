@@ -64,6 +64,7 @@ if selection=='Failure Modes in Student Quizzes (Canvas quiz data)':
     
     # figure formating
     fig_errormode.update_layout(title_font_size=20,title_x=0.5)
+    fig_errormode.update_layout(hovermode="x")
     fig_errormode.update_xaxes(title_font_size=15,tickfont=dict(size=15),title='X Axis')
     fig_errormode.update_yaxes(title_font_size=15,tickfont=dict(size=15),title='Y Axis')
     fig_errormode.update_traces(marker_size=20)
