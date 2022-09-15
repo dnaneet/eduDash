@@ -41,6 +41,7 @@ st.sidebar.markdown("---")
 # first tab code
 if selection=='Failure Modes in Student Quizzes (Canvas quiz data)':
     st.title('Failure Mode Exploration')
+    st.text("The names used in this demonstration have been synthetically generated using the Python Faker package.")
 
     #importing data
     #data_csv = pd.read_csv(url="https://raw.githubusercontent.com/dnaneet/eduDash/main/dummy_quiz.csv")
